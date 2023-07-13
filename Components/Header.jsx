@@ -3,9 +3,18 @@ import React from 'react'
 import { SafeAreaView ,View,TextInput,Image,TouchableOpacity} from 'react-native'
 
 export default function Header() {
+  
+  
+  
   const navigation=useNavigation();
+ 
+ 
+ 
   return (
-    <SafeAreaView>
+   
+   
+   
+   <SafeAreaView>
       <View 
         style={{
           width:"100%",

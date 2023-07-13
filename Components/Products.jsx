@@ -1,11 +1,15 @@
-import { View, Text ,FlatList,Image, SectionList,Button} from 'react-native'
-import React from 'react'
+import { View, Text ,FlatList,Image,TouchableOpacity, SectionList,Button} from 'react-native'
+import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { addItemToCart } from './action/Actions'
 import Header from './Header'
+import { useNavigation } from '@react-navigation/native'
+// import Header from './Header'
 
 const Products = () => {
 
 
-     const carddata = [
+     const data = [
         {
             "id": 1,
             "title": "iPhone 9",
@@ -160,10 +164,21 @@ const Products = () => {
     },
 ]
 
+const navigation = useNavigation();
+
+const dispatch = useDispatch()
 
 
 
+const addItem= item => {
+  dispatch(addItemToCart(item))
+}
 
+let addedItems=[]; 
+
+const items = useSelector (state=>state);
+
+addedItems=items;
 
 
 
@@ -189,6 +204,74 @@ const Products = () => {
 //   }} 
  >
 <Header/>
+   <View
+   
+    style={{
+      width:"100%",
+      height:50,
+      // backgroundColor:"grey",
+      alignItems:"flex-end",
+      justifyContent:"center",
+      paddingRight:20
+      }}
+   
+   >
+       <TouchableOpacity
+          style={{
+            width:130,
+            height:40,
+            backgroundColor:"yellowgreen",
+            borderRadius:20,
+            // justifyContent:"center",
+            alignItems:"center",
+            flexDirection:"row",
+            gap:10
+          }}
+
+
+          onPress={()=>{navigation.navigate('cart')}}
+
+
+
+
+
+       >
+
+       <Image 
+         
+         source={require("../carticon.png")}
+       
+         style={{
+          height:20,width:20,marginLeft:20
+         }}
+       
+       />
+       
+       <Text
+       style={{fontSize:15,fontWeight:"bold"}} 
+       >
+        Cart   {addedItems.length}
+        
+        </Text>
+
+
+
+       </TouchableOpacity>
+
+
+
+
+
+
+   </View>
+
+
+
+
+
+
+
+{/* <Header/> */}
     <FlatList
     style={{
        
@@ -201,7 +284,7 @@ const Products = () => {
    
 
 
-    data={carddata}
+    data={data}
 
 
 
@@ -293,6 +376,10 @@ const Products = () => {
           
           <Button
              title='Add To Cart'
+
+             onPress={()=>{
+              addItem (item);
+             } }
           
             style={{
               width:80,
