@@ -33,7 +33,7 @@ const App1 = ({navigation}) => {
 
     onPress={()=>{
         //  navigation.navigate('products')
-        navigation.openDrawer()
+        navigation.navigate('products')
     }}
    
    

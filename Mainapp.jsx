@@ -1,53 +1,3 @@
-// import React from 'react'
-
-// import { SafeAreaView, ScrollView } from 'react-native'
-
-// import App1 from './App1'
-
-// export default function App() {
-
-
-
-
-
-
-
-//   return (
-    
-
-// //      <SafeAreaView style={{backgroundColor:"#2DBFF8",}}> 
-// //        <ScrollView> 
-// //       <Appnavigator/>
-       
-       
-// //        <Header/>
-// //         <Address/>
-// //         <Flatlist/>
-// //         <Minitv/>
-// //         <Optionlist/>
-// //         <Offer/>
-// //        <Primeday/>
-      
-        
-// //  </ScrollView> 
-     
-
-// //    </SafeAreaView> 
-
-
-
-
-//    <App1/>
-
-
-
-
-
-     
-//   )
-// }
-
-
 import {View, Text} from 'react-native';
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
@@ -105,7 +55,7 @@ const Mainapp = () => {
      
      > 
          
-         <Stack.Screen name="Home" component={Draw}/>
+         <Stack.Screen name="Draw" component={Draw}/>
          <Stack.Screen name="products" component={Products} />
          <Stack.Screen name="cart" component={Cart}/>
          
