@@ -48,7 +48,7 @@ useEffect (()=>{getData()},[])
     data={data}
     renderItem={({item}) => (
       <View style={{
-        width:80,
+        width:85,
         height:"100%",
         // backgroundColor:"white",
         marginLeft:20,
@@ -75,7 +75,7 @@ useEffect (()=>{getData()},[])
       }}
       
       
-      >{item.title}</Text>
+      >{item.category}</Text>
          
       </View>
     )}

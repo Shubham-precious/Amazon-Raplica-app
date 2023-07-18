@@ -24,6 +24,7 @@ const Cart = ({navigation}) => {
       style={{
         justifyContent: 'center',
         alignItems: 'center',
+        height:"100%"
         // paddingTop: 30,
       }}>
         <Header/>
@@ -32,9 +33,10 @@ const Cart = ({navigation}) => {
           width: '100%',
           height: 50,
           // backgroundColor: 'grey',
-          alignItems: 'flex-end',
+          alignItems: 'flex-start',
           justifyContent: 'center',
           paddingRight: 20,
+          marginLeft:10
         }}>
         <TouchableOpacity
           style={{
@@ -76,14 +78,14 @@ const Cart = ({navigation}) => {
           <View
             style={{
               width: '95%',
-              height: 450,
+              height: 500,
               backgroundColor: 'white',
               margin: 10,
               // justifyContent:"center",
               alignItems: 'flex-start',
               padding: 15,
               marginTop: 5,
-              marginBottom: 5,
+              marginBottom: 25,
               shadowOffset: {height: 5, width: 5},
               shadowColor: 'black',
               shadowOpacity: 1,

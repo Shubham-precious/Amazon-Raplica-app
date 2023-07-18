@@ -171,11 +171,11 @@ const Products = ({navigation}) => {
 
   return (
     <View
-    //   style={{
-    //   // height:520,
-    //  width:"100%",
+      style={{
+      height:"100%",
+     width:"100%",
     //  padding:10,
-    //   }}
+      }}
     >
       <Header/>
       <View
@@ -239,7 +239,7 @@ const Products = ({navigation}) => {
               alignItems: 'flex-start',
               padding: 15,
               marginTop: 5,
-              marginBottom: 5,
+              marginBottom: 20,
               shadowOffset: {height: 5, width: 5},
               shadowColor: 'black',
               shadowOpacity: 1,
